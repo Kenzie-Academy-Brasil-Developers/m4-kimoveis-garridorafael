@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { realEstateCreateSchema } from "../Schemas";
-import { RealEstate } from "../Entities";
+import { RealEstate } from "../entities";
 import { Repository } from "typeorm";
 
 type RealEstateCreate = z.infer<typeof realEstateCreateSchema>;

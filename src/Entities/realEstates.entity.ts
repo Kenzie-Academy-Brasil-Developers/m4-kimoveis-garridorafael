@@ -1,6 +1,7 @@
-import { BeforeInsert, Column, CreateDateColumn, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
+import { BeforeInsert, Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
 import { Address } from "./address.entity";
 import { Category } from "./categories.entity";
+
 
 @Entity("realEstates")
 class RealEstate {
@@ -11,7 +12,7 @@ class RealEstate {
     sold: boolean;
 
     @Column({ type: "decimal", precision: 12, scale: 2, default: 0})
-    value: number;
+    value: number | string;
 
     @Column()
     size: number;
@@ -22,11 +23,11 @@ class RealEstate {
     @UpdateDateColumn({ type: 'timestamp' })
     updatedAt: Date;
 
-    @OneToMany(() => Address, address => address.id)
+    @ManyToOne(() => Address, address => address.id)
     @JoinColumn({ name: 'addressId' })
     adress: Address;
 
-    @OneToMany(() => Category, category => category.id)
+    @ManyToOne(() => Category, category => category.id)
     @JoinColumn({ name: 'categoryId' })
     category: Category;
 

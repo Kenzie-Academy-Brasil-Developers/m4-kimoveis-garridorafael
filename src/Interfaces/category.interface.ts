@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { categoryCreateSchema } from "../Schemas";
-import { Category } from "../Entities";
+import { Category } from "../entities";
 
 type CategoryCreate = z.infer<typeof categoryCreateSchema>;
 type CategoryRead = Array<Category>;

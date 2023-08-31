@@ -4,6 +4,7 @@ import {
   addressReturnSchema,
 } from "./address.schema";
 import { categoryCreateSchema, categorySchema } from "./category.schema";
+import { loginCreateSchema } from "./login.schema";
 import {
   realEstateSchema,
   realEstateCreateSchema,
@@ -34,4 +35,5 @@ export {
   realEstateSchema,
   realEstateCreateSchema,
   realEstateReturnSchema,
+  loginCreateSchema,
 };
