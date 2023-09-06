@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { userServices } from "../Services";
 import { UserReturn } from "../Interfaces";
-import { User } from "../entities";
 
 const create = async (req: Request, res: Response): Promise<Response> => {
   const user: UserReturn = await userServices.createUser(req.body);
@@ -10,17 +9,22 @@ const create = async (req: Request, res: Response): Promise<Response> => {
 };
 
 const read = async (req: Request, res: Response): Promise<Response> => {
-    const user = await userServices.readUser();
+  const user = await userServices.readUser();
 
-    return res.status(200).json(user)
-}
+  return res.status(200).json(user);
+};
 
 const update = async (req: Request, res: Response): Promise<Response> => {
   const { foundUser } = res.locals;
   const { body } = req;
+  const { sub, admin } = res.locals.decoded;
 
-  const user: User = await userServices.updateUser(foundUser, body);
-  return res.status(200).json(user);
+  if (admin || foundUser.id.toString() === sub) {
+    const user: UserReturn = await userServices.updateUser(foundUser, body);
+    return res.status(200).json(user);
+  } else {
+    return res.status(403).json({ message: "Insufficient permission" });
+  }
 };
 
 const remove = async (req: Request, res: Response): Promise<Response> => {
