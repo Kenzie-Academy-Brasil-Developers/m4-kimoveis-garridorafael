@@ -28,6 +28,7 @@ userRouter.get(
 userRouter.patch(
   "/:id",
   checkIdExists,
+  verifyToken,
   checkEmailExists,
   validateBody(userUpdateSchema),
   userController.update
