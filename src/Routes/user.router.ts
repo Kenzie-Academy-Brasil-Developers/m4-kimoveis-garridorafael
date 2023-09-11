@@ -6,9 +6,9 @@ import {
   validateBody,
   verifyToken,
   verifyUserPermission,
-} from "../Middlewares";
-import { userCreateSchema, userUpdateSchema } from "../Schemas";
-import { userController } from "../Controllers";
+} from "../middlewares";
+import { userCreateSchema, userUpdateSchema } from "../schemas";
+import { userController } from "../controllers";
 
 const userRouter: Router = Router();
 

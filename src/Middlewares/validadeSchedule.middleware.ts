@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { scheduleRepo } from "../repositories";
-import { AppError } from "../Errors";
+import { AppError } from "../errors";
 
 const checkUserVisitConflict = async (
   req: Request,

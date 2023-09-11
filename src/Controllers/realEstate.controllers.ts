@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { RealEstate } from "../entities";
-import { realEstateServices } from "../Services";
+import { realEstateServices } from "../services";
 import { realEstateRepo } from "../repositories";
 
 const create = async (req: Request, res: Response): Promise<Response> => {

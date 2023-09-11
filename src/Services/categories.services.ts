@@ -1,5 +1,5 @@
-import { AppError } from "../Errors";
-import { CategoryCreate, CategoryRead, CategoryReturn } from "../Interfaces";
+import { AppError } from "../errors";
+import { CategoryCreate, CategoryRead, CategoryReturn } from "../interfaces";
 import { Category } from "../entities";
 import { categoriesRepo } from "../repositories";
 

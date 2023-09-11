@@ -1,8 +1,8 @@
 import { compare } from "bcryptjs";
-import { AppError } from "../Errors";
+import { AppError } from "../errors";
 import { usersRepo } from "../repositories";
 import { sign } from "jsonwebtoken";
-import { loginCreate, loginReturn } from "../Interfaces";
+import { loginCreate, loginReturn } from "../interfaces";
 import { User } from "../entities";
 
 const createLogin = async ({

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { realEstateCreateSchema, realEstateReturnSchema } from "../Schemas";
+import { realEstateCreateSchema, realEstateReturnSchema } from "../schemas";
 import { Address, RealEstate } from "../entities";
 import { Repository } from "typeorm";
 

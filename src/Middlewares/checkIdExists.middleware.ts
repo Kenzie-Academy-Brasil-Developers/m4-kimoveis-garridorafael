@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { User } from "../entities";
 import { usersRepo } from "../repositories";
-import { AppError } from "../Errors";
+import { AppError } from "../errors";
 
 const checkIdExists = async (
   req: Request,

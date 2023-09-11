@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { scheduleCreateSchema, scheduleReturnSchema } from "../Schemas";
+import { scheduleCreateSchema, scheduleReturnSchema } from "../schemas";
 import { Schedule } from "../entities";
 import { Repository } from "typeorm";
 

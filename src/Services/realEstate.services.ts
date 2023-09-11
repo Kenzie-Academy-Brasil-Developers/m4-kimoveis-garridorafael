@@ -1,5 +1,5 @@
-import { AppError } from "../Errors";
-import { RealEstateCreate, RealEstateRead } from "../Interfaces";
+import { AppError } from "../errors";
+import { RealEstateCreate, RealEstateRead } from "../interfaces";
 import { RealEstate } from "../entities";
 import { addressRepo, categoriesRepo, realEstateRepo } from "../repositories";
 

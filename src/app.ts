@@ -2,14 +2,14 @@ import "reflect-metadata";
 import "express-async-errors";
 import express, { Application } from "express";
 import "dotenv/config";
-import { handleErrors } from "./Middlewares";
+import { handleErrors } from "./middlewares";
 import {
   categoryRouter,
   loginRouter,
   realEstateRouter,
   scheduleRouter,
   userRouter,
-} from "./Routes";
+} from "./routes";
 
 const app: Application = express();
 app.use(express.json());

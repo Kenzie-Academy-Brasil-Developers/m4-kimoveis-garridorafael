@@ -5,7 +5,7 @@ import {
   RealEstateRepo,
   ScheduleRepo,
   UsersRepo,
-} from "./Interfaces";
+} from "./interfaces";
 import { AppDataSource } from "./data-source";
 
 const usersRepo: UsersRepo = AppDataSource.getRepository(User);

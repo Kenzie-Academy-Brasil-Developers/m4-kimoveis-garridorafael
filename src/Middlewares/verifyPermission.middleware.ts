@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { AppError } from "../Errors";
+import { AppError } from "../errors";
 import { verify } from "jsonwebtoken";
 
 const verifyUserPermission = (

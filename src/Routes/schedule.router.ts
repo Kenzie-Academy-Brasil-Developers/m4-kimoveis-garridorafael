@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { scheduleController } from "../Controllers";
-import { scheduleCreateSchema } from "../Schemas";
+import { scheduleController } from "../controllers";
+import { scheduleCreateSchema } from "../schemas";
 import {
   verifyToken,
   validateAdmin,
@@ -8,7 +8,7 @@ import {
   validateBody,
   checkUserVisitConflict,
   checkBusinessHoursAndDays,
-} from "../Middlewares";
+} from "../middlewares";
 
 const scheduleRouter: Router = Router();
 

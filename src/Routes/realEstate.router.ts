@@ -1,13 +1,13 @@
 import { Router } from "express";
-import { realEstateControllers } from "../Controllers";
+import { realEstateControllers } from "../controllers";
 import {
   verifyToken,
   validateAdmin,
   verifyUserPermission,
   validateBody,
   checkNameCategoryExists,
-} from "../Middlewares";
-import { realEstateCreateSchema } from "../Schemas";
+} from "../middlewares";
+import { realEstateCreateSchema } from "../schemas";
 
 const realEstateRouter: Router = Router();
 

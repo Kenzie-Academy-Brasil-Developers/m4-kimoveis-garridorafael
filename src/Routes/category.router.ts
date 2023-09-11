@@ -5,9 +5,9 @@ import {
   validateBody,
   verifyToken,
   verifyUserPermission,
-} from "../Middlewares";
-import { categoryCreateSchema } from "../Schemas";
-import { categoriesController } from "../Controllers";
+} from "../middlewares";
+import { categoryCreateSchema } from "../schemas";
+import { categoriesController } from "../controllers";
 
 const categoryRouter: Router = Router();
 

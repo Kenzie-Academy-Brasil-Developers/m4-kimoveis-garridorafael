@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { categoryCreateSchema, categoryReturnSchema } from "../Schemas";
+import { categoryCreateSchema, categoryReturnSchema } from "../schemas";
 import { Category } from "../entities";
 import { Repository } from "typeorm";
 

@@ -1,5 +1,5 @@
-import { AppError } from "../Errors";
-import { ScheduleCreate, ScheduleRead } from "../Interfaces";
+import { AppError } from "../errors";
+import { ScheduleCreate, ScheduleRead } from "../interfaces";
 import { RealEstate, Schedule } from "../entities";
 import { realEstateRepo, scheduleRepo } from "../repositories";
 

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { userCreateSchema, userReadSchema, userReturnSchema } from "../Schemas";
+import { userCreateSchema, userReadSchema, userReturnSchema } from "../schemas";
 import { User } from "../entities";
 import { DeepPartial, Repository } from "typeorm";
 
